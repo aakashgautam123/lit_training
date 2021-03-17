@@ -1,0 +1,12 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/components/app-view.js",
+  "sources": ["src/**/*"],
+  "builds": [
+    {
+      "name": "es5prod",
+      "preset": "es5-bundled",
+      "addServiceWorker": false
+    }
+  ]
+}

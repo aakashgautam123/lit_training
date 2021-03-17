@@ -16,15 +16,19 @@ export default function initRouter(outlet) {
   router.setRoutes([
     {
       path: '/login',
-      component: 'login-view'
+      component: 'login-view',
+
     },
     {
       path: '/posts',
       component: 'posts-view',
+      action : async () => { await import (/* webpackChunkName: "post-view"   */ '../components/posts-view.js') }
+
     },
     {
       path: '(.*)', 
       component: 'not-found-view',
+    
     }
   ]);
 }

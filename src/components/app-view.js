@@ -23,7 +23,9 @@ class AppView extends LitElement{
     return html`
     <a href="/posts">Posts</a>
     <a href="/not-found">Not Found</a>
-    <main></main>
+    <main>
+      
+    </main>
     `
   }
 }

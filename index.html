@@ -4,12 +4,16 @@
   <head>
     <meta charset="utf-8">
     <title>&lt;my-element> Demo</title>
-    <script type="module" src="./src/components/app-view.js"></script>
+    <base href="/">
+    <script nomodule src="https://unpkg.com/@vaadin/router/dist/vaadin-router.umd.js"></script>
+    <script type="module" src="https://unpkg.com/@vaadin/router"></script>
+    
   
   </head>
-
-  <body>
-    <app-view></app-view>
-  </body>
   
+  <body>
+   
+    <app-view></app-view>
+    <script type="module" src="./src/components/app-view.js"></script>
+  </body>
 </html>

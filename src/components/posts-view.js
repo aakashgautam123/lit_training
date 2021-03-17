@@ -34,6 +34,7 @@ class PostsView extends LitElement {
    * @returns {html}
    */
   render(){
+    console.log('rendered')
     return html`
     ${this.posts.map(post => html`<post-item .post=${post}></post-item>`)}
     `
