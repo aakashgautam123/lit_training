@@ -22,6 +22,7 @@ class AppView extends LitElement{
   render(){
     return html`
     <a href="/posts">Posts</a>
+    <a href="/post-create">Create Post</a>
     <a href="/not-found">Not Found</a>
     <main>
       

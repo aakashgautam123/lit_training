@@ -26,6 +26,11 @@ export default function initRouter(outlet) {
 
     },
     {
+      path: '/post-create',
+      component: 'post-create',
+      action: async () => { await import ('../components/post-create.js')}
+    },
+    {
       path: '(.*)', 
       component: 'not-found-view',
     
