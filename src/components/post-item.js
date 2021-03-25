@@ -25,7 +25,8 @@ class PostItem extends LitElement {
    */
   static get properties(){
     return {
-      post: {type: Object}
+      post: {type: Object},
+      _updatePost : Function
     }
   }
   /**
@@ -34,6 +35,7 @@ class PostItem extends LitElement {
   constructor(){
     super();
     this.post = {userId: '', id: '', title: '', body: ''}
+    this._updatePost = () => {}
   }
   /**
    * renders custom html template for the component 
@@ -43,11 +45,12 @@ class PostItem extends LitElement {
     return html`
     <paper-card heading="Emmental" image="http://placehold.it/100x30/FFC107/000000" alt="Emmental">
       <div class="card-content">
-        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+       ${this.post.title}
+       ${this.post.body}
       </div>
       <div class="card-actions">
-        <paper-button class="indigo">Share</paper-button>
-        <paper-button raised class="pink">Explore!</paper-button>
+        <paper-button class="indigo"><a href="/post/edit/${this.post.id}">Edit</paper-button>
+        <paper-button raised class="pink">Delete</paper-button>
       </div>
     </paper-card>
     `

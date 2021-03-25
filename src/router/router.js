@@ -3,8 +3,8 @@ import {Router} from '@vaadin/router';
 import '../constants/url' 
 
 //do i need to import all components in router
-import '../components/posts-view'
-import '../components/not-found-view'
+// import '../components/posts-view'
+// import '../components/not-found-view'
 
 
 /**
@@ -25,6 +25,20 @@ export default function initRouter(outlet) {
       action : async () => { await import (/* webpackChunkName: "post-view"   */ '../components/posts-view.js') }
 
     },
+    
+    {
+      path: '/post/edit/:id',
+      component: 'post-edit',
+      action : async () => { await import (/* webpackChunkName: "post-view"   */ '../components/post-edit.js') }
+
+    },
+
+    {
+      path: '/vadingrid',
+      component: 'grid-view',
+      action: async () => { await import(/* webpackChunkName: "grid-view"  */ '../components/grid-view.js')}
+    },
+    
     {
       path: '(.*)', 
       component: 'not-found-view',
