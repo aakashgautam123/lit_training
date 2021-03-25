@@ -26,6 +26,12 @@ export default function initRouter(outlet) {
 
     },
     {
+      path: '/update',
+      component: 'update',
+      action : async () => { await import (/* webpackChunkName: "update"   */ '../components/update.js') }
+
+    },
+    {
       path: '(.*)', 
       component: 'not-found-view',
     
