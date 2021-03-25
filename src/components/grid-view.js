@@ -66,7 +66,7 @@ class GridView extends LitElement {
    */
   render(){
     return html`
-    <h1>Grid View Page updated</h1>
+    <h1>Grid View Page updated after pull master</h1>
     
     <vaadin-grid .items="${this.items}">
       <vaadin-grid-selection-column auto-select></vaadin-grid-selection-column>
